@@ -1,0 +1,4 @@
+@function space($number) {
+    $total:  $number * 8;
+    @return $total + 'px'
+}

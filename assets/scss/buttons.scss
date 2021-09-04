@@ -1,0 +1,15 @@
+.btn{
+    background-color: #ed155d;
+    color: white;
+    border: solid 2px #ed155d;
+    padding: 8px;
+    transition: 0.4s;
+
+}
+.btn--fill, .btn:hover{
+    background-color: white;
+    color: #ed155d;
+    border: solid 2px #ed155d;
+    padding: 8px;
+    cursor: pointer;
+}
