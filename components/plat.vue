@@ -21,7 +21,7 @@
               </div>
             </div>
           </div>
-          <input class="btn" type="button" value="Voir tous les ingrédients">
+          <NuxtLink :to="/plats/+plat.section+'-'+plat.slug"><input class="btn" type="button" value="Voir tous les ingrédients"></NuxtLink>
         </div>
 
         <div class="plat_nutritionals">
@@ -39,7 +39,7 @@
               </span>
             </div>
           </div>
-          <input class="btn" type="button" value="Recette">
+          <NuxtLink :to="/plats/+plat.section+'-'+plat.slug"><input class="btn" type="button" value="Voir la recette"></NuxtLink>
           <input class="btn--fill" type="button" value="Ajouter aux favoris">
         </div>
         </div>

@@ -2,14 +2,14 @@
     {
         "slug": "002",
         "section": "fish",
-        "title": "Fish",
+        "title": "Poisson",
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam, dolore totam earum eveniet accusamus ipsam autem quidem cum deleniti temporibus ducimus molestiae quae placeat. Dolores architecto odit voluptatibus impedit.",
         "img": "001.png",
         "ingredients": [
           {
             "img": "chicken.svg",
-            "title": "Poulet",
-            "quantity": "1 pièce de poulet"
+            "title": "Poisson",
+            "quantity": "1 tranche de poisson"
           },
           {
             "img": "honey.svg",
