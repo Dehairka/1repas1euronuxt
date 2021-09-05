@@ -32,6 +32,9 @@ export default {
     border-radius: 24px;
     position: relative;
     font-family: 'Lato', sans-serif;
+    height: 97vh;
+    width: 96vw;
+    margin: auto;
 
     &_topNav{
         width: 100%;
@@ -59,8 +62,8 @@ export default {
     &_content{
         height: 85%;
         display: flex;
-        overflow-x: visible;
-        overflow-y: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
 
         .nav{
             margin: auto;
@@ -101,4 +104,5 @@ export default {
         }
     }
 }
+
 </style>

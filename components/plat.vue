@@ -1,7 +1,7 @@
 <template>
   <div class="plat">
           <img v-if="plat.img" class="plat_img" :src="imgSrc(plat.img, 'plats')" alt="Image plat">
-          <h2 class="plat_title"><NuxtLink :to="/plats/+plat.slug">{{plat.title}}</NuxtLink></h2>
+          <h2 class="plat_title"><NuxtLink :to="/plats/+plat.section+'-'+plat.slug">{{plat.title}}</NuxtLink></h2>
           <p class="plat_description">{{plat.description}}</p>
 
         <div class="plat_ingredients">
@@ -72,7 +72,7 @@ export default {
     border: 8px solid white;
     width: 50vw;
     min-height: 40vh;
-    height: 87%;
+    height: 85%;
     border-radius: 16px;
     display: flex;
     flex-direction: column;

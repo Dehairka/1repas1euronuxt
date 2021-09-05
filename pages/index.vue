@@ -2,13 +2,13 @@
   <div class="homePage">
     <div class="homePage_nav">
       <ul class="nav">
-        <li>All</li>
-        <li class="active">Chicken</li>
-        <li>Fish</li>
-        <li>Fruits</li>
-        <li>Pasta</li>
-        <li>Pakistani</li>
-        <li>Chinese</li>
+        <li :class="sectionActivated == 'all' ? 'active' : ''" @click="changeSection('all')">All</li>
+        <li :class="sectionActivated == 'chicken' ? 'active' : ''" @click="changeSection('chicken')">Chicken</li>
+        <li :class="sectionActivated == 'fish' ? 'active' : ''" @click="changeSection('fish')">Fish</li>
+        <li :class="sectionActivated == 'fruit' ? 'active' : ''" @click="changeSection('fruit')">Fruits</li>
+        <li :class="sectionActivated == 'pasta' ? 'active' : ''" @click="changeSection('pasta')">Pasta</li>
+        <li :class="sectionActivated == 'pakistani' ? 'active' : ''" @click="changeSection('pakistani')">Pakistani</li>
+        <li :class="sectionActivated == 'chinese' ? 'active' : ''" @click="changeSection('chinese')">Chinese</li>
       </ul>
       <!-- <div class="swiper-pagination" slot="pagination"></div> -->
     </div>
@@ -38,6 +38,7 @@ export default {
   data(){
     return {
       plats: [],
+      sectionActivated: 'all',
       swiperOptions: {
           slidesPerView: 1.5,
           spaceBetween: 300,
@@ -50,7 +51,7 @@ export default {
     }
   },
   async fetch() {
-    this.plats = await this.$content('plats')
+    this.plats = await this.$content('plats', {deep:true})
       .fetch()
   },
   computed: {
@@ -68,6 +69,17 @@ export default {
       } catch (error) {
         return null
       }
+    },
+    async changeSection(section){
+      this.sectionActivated = section
+      if(section !== 'all'){
+        this.plats = await this.$content('plats/'+section)
+          .fetch()
+      }else{
+        this.plats = await this.$content('plats', { deep: true })
+          .fetch()
+      }
+      
     }
   }
 }

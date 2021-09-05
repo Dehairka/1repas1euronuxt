@@ -1,6 +1,8 @@
 [
     {
-        "title": "Chicken Steak",
+        "slug": "003",
+        "section": "fruit",
+        "title": "Fruits",
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam, dolore totam earum eveniet accusamus ipsam autem quidem cum deleniti temporibus ducimus molestiae quae placeat. Dolores architecto odit voluptatibus impedit.",
         "img": "001.png",
         "ingredients": [

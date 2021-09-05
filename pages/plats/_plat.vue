@@ -64,7 +64,8 @@ export default {
     }
   },
   async fetch() {
-    this.plat = await this.$content('plats/001')
+    const params = this.$route.params.plat.split("-")
+    this.plat = await this.$content('plats/'+params[0]+'/'+params[1])
       .fetch()
   },
   methods: {

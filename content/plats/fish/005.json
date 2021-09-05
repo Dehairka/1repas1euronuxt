@@ -1,0 +1,53 @@
+[
+    {
+        "slug": "005",
+        "section": "fish",
+        "title": "Fish",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam, dolore totam earum eveniet accusamus ipsam autem quidem cum deleniti temporibus ducimus molestiae quae placeat. Dolores architecto odit voluptatibus impedit.",
+        "img": "001.png",
+        "ingredients": [
+          {
+            "img": "chicken.svg",
+            "title": "Poulet",
+            "quantity": "1 pièce de poulet"
+          },
+          {
+            "img": "honey.svg",
+            "title": "Miel",
+            "quantity": "1 Cllr"
+          },
+          {
+            "img": "olive.svg",
+            "title": "Huile d'olive",
+            "quantity": "1 Cllr"
+          },
+          {
+            "img": "egg.svg",
+            "title": "Oeufs",
+            "quantity": "2 pièces"
+          }
+        ],
+        "nutritionals": [
+          {
+            "number": "350",
+            "title": "Calories",
+            "value": "Kcal"
+          },
+          {
+            "number": "15",
+            "title": "Protéines",
+            "value": "g"
+          },
+          {
+            "number": "25",
+            "title": "Fats",
+            "value": "g"
+          },
+          {
+            "number": "90",
+            "title": "Carbs",
+            "value": "g"
+          }
+        ]
+      }
+]
