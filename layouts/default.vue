@@ -2,6 +2,12 @@
   <div class="layoutDefault">
       <div class="layoutDefault_topNav">
           <img width="170" :src="require('@/assets/img/logo.png')" alt="logo">
+          <ul>
+              <li class="active"><NuxtLink to="/">Recettes</NuxtLink></li>
+              <li>Générateurs</li>
+              <li>A propos</li>
+              <li>Contact</li>
+          </ul>
       </div>
       <div class="layoutDefault_content">
           <ul class="nav">
@@ -35,6 +41,22 @@ export default {
         height: 7%;
         // background-color: grey;
         padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        
+        ul{
+            display: flex;
+            align-items: center;
+            margin-right: 32px;
+            li{
+                margin-right: 8px;
+                color: rgba(0,0,0,0.5);
+            }
+            li.active, li:hover{
+                color: black;
+                cursor: pointer;
+            }
+        }
     }
 
     &_content{
