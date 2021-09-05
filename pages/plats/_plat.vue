@@ -1,7 +1,7 @@
 <template>
-  <div class="plat">
-          <img v-if="plat.img" class="plat_img" :src="imgSrc(plat.img, 'plats')" alt="Image plat">
-          <h2 class="plat_title"><NuxtLink :to="/plats/+plat.slug">{{plat.title}}</NuxtLink></h2>
+  <div class="platPage plat">
+    <img v-if="plat.img" class="plat_img" :src="imgSrc(plat.img, 'plats')" alt="Image plat">
+          <h2 class="plat_title">{{plat.title}}</h2>
           <p class="plat_description">{{plat.description}}</p>
 
         <div class="plat_ingredients">
@@ -42,14 +42,30 @@
           <input class="btn" type="button" value="Recette">
           <input class="btn--fill" type="button" value="Ajouter aux favoris">
         </div>
+
+        <div class="plat_instructions">
+          <h3>Instructions de préparation</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis perspiciatis quis numquam eum repudiandae inventore eius aliquid iusto ab nisi, ad amet. Eveniet veritatis ratione nobis. Suscipit, tenetur itaque.</p>
+          <div v-for="(step, index) in 3" :key="index" class="step">
+            <h4>Étape {{index+1}}</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas repudiandae obcaecati consequatur, facilis placeat cumque assumenda temporibus sapiente esse, fugiat qui enim accusantium, dolorem exercitationem! Laudantium sunt numquam qui repellat?</p>
+          </div>          
         </div>
+  </div>
 </template>
 
 <script>
+
 export default {
-  name: 'plat',
-  props: {
-    plat: Object
+  layout: 'defaultWithoutNav',
+  data(){
+    return {
+      plat: []
+    }
+  },
+  async fetch() {
+    this.plat = await this.$content('plats/001')
+      .fetch()
   },
   methods: {
     imgSrc(nameImg, folder){
@@ -68,17 +84,11 @@ export default {
     margin-top: 32px;
     padding: 8px;
     position: relative;
-    background-color: $primary;
-    border: 8px solid white;
-    width: 50vw;
-    min-height: 40vh;
-    height: 87%;
-    border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    cursor: auto;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    margin: auto;
 
   p{
     width: 70%;
@@ -92,9 +102,9 @@ export default {
 
     &_img{
       position: absolute;
-      right: -15vw;
-      top: 0vh;
       width: 35vw;
+      right: 0;
+      top: 0;
       // z-index: 5;
     }
 
@@ -153,4 +163,9 @@ export default {
       }
     }
   }
+
+.step{
+  margin: 8px;
+  margin-left: 0px;
+}
 </style>

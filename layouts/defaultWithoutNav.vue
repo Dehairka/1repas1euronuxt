@@ -5,18 +5,13 @@
           <img width="170" :src="require('@/assets/img/logo.png')" alt="logo">
           </NuxtLink>
           <ul>
-              <li class="active"><NuxtLink to="/">Recettes</NuxtLink></li>
+              <li><NuxtLink to="/">Recettes</NuxtLink></li>
               <li>Générateurs</li>
               <li>A propos</li>
               <li>Contact</li>
           </ul>
       </div>
       <div class="layoutDefault_content">
-          <ul class="nav">
-              <li>Breakfast</li>
-              <li class="active">Lunch</li>
-              <li>Dinner</li>
-          </ul>
           <div class="content">
             <Nuxt />
           </div>
@@ -91,7 +86,7 @@ export default {
                 height: 5px;
                 position: absolute;
                 padding: 5px;
-                top: 32px;
+                top: 25px;
                 right: 40%;
                 border-radius: 20px;
             }
@@ -102,7 +97,6 @@ export default {
         }
         .content{
             padding: 24px;
-            padding-right: 0px;
             width: 90%;
         }
     }
