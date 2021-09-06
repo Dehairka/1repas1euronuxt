@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
   head: {
     title: '1repas1euro',
     htmlAttrs: {
